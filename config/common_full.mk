@@ -1,10 +1,10 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common MaxiCM stuff
+$(call inherit-product, vendor/maxi/config/common.mk)
 
 # Include CM audio files
-include vendor/cm/config/cm_audio.mk
+include vendor/maxi/config/cm_sounds.mk
 
-# Optional CM packages
+# Optional MaxiCM packages
 PRODUCT_PACKAGES += \
     Galaxy4 \
     HoloSpiralWallpaper \
@@ -18,7 +18,7 @@ PRODUCT_PACKAGES += \
     SoundRecorder \
     PhotoPhase
 
-# Extra tools in CM
+# Extra tools in MaxiCM
 PRODUCT_PACKAGES += \
     vim \
     zip \
