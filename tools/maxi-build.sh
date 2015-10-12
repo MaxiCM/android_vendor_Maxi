@@ -97,8 +97,8 @@ if [ ! -d ".repo" ]; then
     echo ""
     exit 1
 fi
-if [ ! -d "vendor/cm" ]; then
-    echo -e "${bldred}No vendor/cm directory found.  Is this a CM build tree?${rst}"
+if [ ! -d "vendor/maxi" ]; then
+    echo -e "${bldred}No vendor/maxi directory found.  Is this a CM build tree?${rst}"
     echo ""
     exit 1
 fi
