@@ -62,8 +62,8 @@ usage() {
 
 
 # Import Colors
-. ./vendor/cm/tools/colors
-. ./vendor/cm/tools/res/MaxiCM-start
+. ./vendor/maxi/tools/colors
+. ./vendor/maxi/tools/res/MaxiCM-start
 
 
 # CM version
@@ -186,10 +186,10 @@ fi
 device="$1"
 
 # download prebuilt files
-if [ -x "vendor/cm/get-prebuilts" -a ! -d "vendor/cm/proprietary" ]; then
+if [ -x "vendor/maxi/get-prebuilts" -a ! -d "vendor/maxi/proprietary" ]; then
     echo -e ""
     echo -e ${bldblu}"Downloading prebuilts"${txtrst}
-    vendor/cm/get-prebuilts
+    vendor/maxi/get-prebuilts
     echo -e ""
 fi
 
@@ -216,9 +216,9 @@ fi
 # CM device dependencies
 echo -e "${bldcya}Looking for CM product dependencies${bldgrn}"
 if [ "$opt_kr" -ne 0 ]; then
-    vendor/cm/tools/getdependencies.py "$device" "$opt_kr"
+    vendor/maxi/tools/getdependencies.py "$device" "$opt_kr"
 else
-    vendor/cm/tools/getdependencies.py "$device"
+    vendor/maxi/tools/getdependencies.py "$device"
 fi
 echo -e "${rst}"
 
@@ -362,7 +362,7 @@ rm -f "$OUTDIR"/target/product/"$device"/obj/KERNEL_OBJ/.version
 # Lunch device
 echo ""
 echo -e "${bldcya}Lunching device${rst}"
-lunch "cm_$device-userdebug"
+lunch "maxi_$device-userdebug"
 
 
 # Pipe option
