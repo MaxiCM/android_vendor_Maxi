@@ -214,7 +214,7 @@ PRODUCT_PACKAGES += \
 endif
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    persist.sys.root_access=0
+    persist.sys.root_access=1
 
 PRODUCT_PACKAGE_OVERLAYS += vendor/maxi/overlay/common
 
