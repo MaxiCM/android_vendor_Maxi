@@ -238,7 +238,7 @@ ifndef MAXI_BUILDTYPE
 endif
 
 # Filter out random types, so it'll reset to UNOFFICIAL
-ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL,$(MAXI_BUILDTYPE)),)
+ifeq ($(filter RELEASE NIGHTLY SNAPSHOT EXPERIMENTAL OFFICIAL,$(MAXI_BUILDTYPE)),)
     MAXI_BUILDTYPE :=
 endif
 
