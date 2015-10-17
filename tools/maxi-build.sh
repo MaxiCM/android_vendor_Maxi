@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# build-cm.sh: the overarching build script for the ROM.
+# maxi-build.sh: the overarching build script for the ROM.
 # Copyright (C) 2015 The MaxiCM Team Project
 #
 # This program is free software; you can redistribute it and/or
@@ -20,7 +20,7 @@
 
 usage() {
     echo -e "${bldblu}Usage:${bldcya}"
-    echo -e "  build-cm.sh [options] device"
+    echo -e "  build-maxi.sh [options] device"
     echo ""
     echo -e "${bldblu}  Options:${bldcya}"
     echo -e "    -a  Disable ADB authentication and set root access to Apps and ADB"
@@ -55,7 +55,7 @@ usage() {
     echo -e "        2 - Send all output to a log file"
     echo ""
     echo -e "${bldblu}  Example:${bldcya}"
-    echo -e "    ./build-cm.sh -c1 shamu"
+    echo -e "    ./maxi-build.sh -c1 jagnm"
     echo -e "${rst}"
     exit 1
 }
@@ -66,10 +66,10 @@ usage() {
 . ./vendor/maxi/tools/res/MaxiCM-start
 
 
-# CM version
-export CM_VERSION_MAJOR="LP-MR17"
-export CM_VERSION_MINOR="Alpha"
-export CM_VERSION_MAINTENANCE="Inestable"
+# MaxiCM version
+export MAXI_VERSION_MAJOR="MaxiCM LP"
+export MAXI_VERSION_MINOR="5.1"
+export MAXI_VERSION_MAINTENANCE="UNOFFICIAL"
 # Acceptable maintenance versions are; Stable, Official, Nightly or Unofficial
 
 
@@ -83,12 +83,12 @@ fi
 
 
 # Maintenance logic
-if [ -s ~/CMname ]; then
-    export CM_MAINTENANCE=$(cat ~/CMname)
+if [ -s ~/MAXIname ]; then
+    export MAXI_MAINTENANCE=$(cat ~/MAXIname)
 else
-    export CM_MAINTENANCE="$CM_VERSION_MAINTENANCE"
+    export MAXI_MAINTENANCE="$MAXI_VERSION_MAINTENANCE"
 fi
-export CM_VERSION="$CM_VERSION_MAJOR $CM_VERSION_MINOR $CM_MAINTENANCE"
+export MAXI_VERSION="$MAXI_VERSION_MAJOR $MAXI_VERSION_MINOR $MAXI_MAINTENANCE"
 
 
 # Check directories
@@ -98,7 +98,7 @@ if [ ! -d ".repo" ]; then
     exit 1
 fi
 if [ ! -d "vendor/maxi" ]; then
-    echo -e "${bldred}No vendor/maxi directory found.  Is this a CM build tree?${rst}"
+    echo -e "${bldred}No vendor/maxi directory found.  Is this a MaxiCM build tree?${rst}"
     echo ""
     exit 1
 fi
@@ -213,8 +213,8 @@ elif [ "$opt_chromium" -eq 2 ]; then
 fi
 
 
-# CM device dependencies
-echo -e "${bldcya}Looking for CM product dependencies${bldgrn}"
+# MaxiCM device dependencies
+echo -e "${bldcya}Looking for MaxiCM product dependencies${bldgrn}"
 if [ "$opt_kr" -ne 0 ]; then
     vendor/maxi/tools/getdependencies.py "$device" "$opt_kr"
 else
@@ -249,7 +249,7 @@ if [ "$opt_clean" -eq 1 ]; then
     echo ""
 elif [ "$opt_clean" -eq 2 ]; then
     . build/envsetup.sh
-    lunch "cm_$device-userdebug"
+    lunch "maxi_$device-userdebug"
     make installclean >/dev/null
     echo -e "${bldcya}Output directory is: ${bldred}Dirty${rst}"
     echo ""
@@ -287,10 +287,10 @@ fi
 # Lower RAM devices
 if [ "$opt_lrd" -ne 0 ]; then
     echo -e "${bldcya}Applying optimizations for devices with low RAM${rst}"
-    export CM_LOW_RAM_DEVICE=true
+    export MAXI_LOW_RAM_DEVICE=true
     echo ""
 else
-    unset CM_LOW_RAM_DEVICE
+    unset MAXI_LOW_RAM_DEVICE
 fi
 
 
@@ -408,7 +408,7 @@ fi
 
 
 # Start compilation
-unset CM_MAKE
+unset MAXI_MAKE
 if [ "$opt_only" -eq 1 ]; then
     echo -e "${bldcya}Starting compilation: ${bldgrn}Building Boot Image only${rst}"
     echo ""
@@ -416,10 +416,10 @@ if [ "$opt_only" -eq 1 ]; then
 elif [ "$opt_only" -eq 2 ]; then
     echo -e "${bldcya}Starting compilation: ${bldgrn}Building Recovery Image only${rst}"
     echo ""
-    export CM_MAKE=recoveryimage
+    export MAXI_MAKE=recoveryimage
     make -j$opt_jobs$opt_v$opt_i recoveryimage
 else
-    echo -e "${bldcya}Starting compilation: ${bldgrn}Building ${bldylw}CM-ROM ${bldmag}$CM_VERSION_MAJOR ${bldcya}$CM_VERSION_MINOR ${bldred}$CM_MAINTENANCE${rst}"
+    echo -e "${bldcya}Starting compilation: ${bldgrn}Building ${bldylw}MaxiCM-ROM ${bldmag}$MAXI_VERSION_MAJOR ${bldcya}$MAXI_VERSION_MINOR ${bldred}$MAXI_MAINTENANCE${rst}"
     echo ""
     make -j$opt_jobs$opt_v$opt_i bacon
 fi
