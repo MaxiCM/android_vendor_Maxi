@@ -20,7 +20,7 @@
 
 usage() {
     echo -e "${bldblu}Usage:${bldcya}"
-    echo -e "  build-maxi.sh [options] device"
+    echo -e "  maxi-build.sh [options] device"
     echo ""
     echo -e "${bldblu}  Options:${bldcya}"
     echo -e "    -a  Disable ADB authentication and set root access to Apps and ADB"
