@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 #
 # getdependencies.py: add the necessary dependencies to the local manifest
-# Copyright (C) 2015 The PAC-ROM Project
+# Copyright (C) 2015 MaxiCM Project
 #
 # This program is free software; you can redistribute it and/or
 # modify it under the terms of the GNU General Public License
@@ -141,7 +141,7 @@ def add_to_manifest(repositories):
 
 def fetch_dependencies(device):
 #    print('Looking for PAC product dependencies')
-    dependencies_path = 'vendor/pac/dependencies/' + device + '.dependencies'
+    dependencies_path = 'vendor/maxi/dependencies/' + device + '.dependencies'
 
     syncable_repos = []
 
