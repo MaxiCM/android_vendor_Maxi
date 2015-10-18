@@ -130,19 +130,21 @@ PRODUCT_PACKAGES += \
     libemoji \
     Terminal
 
-# Custom MaxiCM packages
+# Custom CM packages
 PRODUCT_PACKAGES += \
     Launcher3 \
     Trebuchet \
     AudioFX \
-    CMWallpapers \
     CMFileManager \
     Eleven \
     LockClock \
-    CMUpdater \
     CMHome \
     CyanogenSetupWizard \
     CMSettingsProvider
+    
+# MaxiCM packages
+PRODUCT_PACKAGES += \
+   MaxiWallpapers
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
