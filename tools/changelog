@@ -45,4 +45,4 @@ rm $out/*/system/etc/$Changelog
 fi
 cp $Changelog $OUT/system/etc/
 cp $Changelog $OUT/
-rm $Changeloge
+rm $Changelog
