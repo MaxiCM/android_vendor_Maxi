@@ -139,11 +139,11 @@ PRODUCT_PACKAGES += \
     Eleven \
     LockClock \
     CMHome \
-    CyanogenSetupWizard \
     CMSettingsProvider
     
 # MaxiCM packages
 PRODUCT_PACKAGES += \
+   MaxiSetupWizard \
    MaxiWallpapers
 
 # CM Platform Library
