@@ -294,6 +294,7 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.maxi.version=$(MAXI_VERSION) \
   ro.maxi.releasetype=$(MAXI_BUILDTYPE) \
   ro.modversion=$(MAXI_VERSION) \
+  maxi.ota.version= $(shell date -u +%Y%m%d) \
   ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
 
 -include vendor/cm-priv/keys/keys.mk
