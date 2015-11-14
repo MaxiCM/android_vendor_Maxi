@@ -144,8 +144,7 @@ PRODUCT_PACKAGES += \
 # MaxiCM packages
 PRODUCT_PACKAGES += \
    MaxiSetupWizard \
-   MaxiWallpapers \
-   OTACenter
+   MaxiWallpapers
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
