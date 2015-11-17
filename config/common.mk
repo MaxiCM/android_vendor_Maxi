@@ -166,6 +166,7 @@ PRODUCT_PACKAGES += \
 # MaxiCM packages
 PRODUCT_PACKAGES += \
    MaxiSetupWizard \
+   OTAUpdates \
    MaxiWallpapers
 
 # CM Platform Library
@@ -321,8 +322,8 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.maxi.version=$(MAXI_VERSION) \
   ro.maxi.releasetype=$(MAXI_BUILDTYPE) \
   ro.modversion=$(MAXI_VERSION) \
-  maxi.ota.version= $(shell date -u +%Y%m%d) \
-  maxi.ota.romname=MaxiCM
+  ro.ota.version= $(shell date -u +%Y%m%d) \
+  ro.ota.romname=MaxiCM
   ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
 
 -include vendor/cm-priv/keys/keys.mk
