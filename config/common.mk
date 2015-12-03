@@ -85,6 +85,7 @@ PRODUCT_COPY_FILES += \
 
 # MaxiCM Tweaks
 PRODUCT_COPY_FILES += \
+    vendor/maxi/prebuilt/common/etc/init.d/S58ramscript:system/etc/init.d/S58ramscript \
     vendor/maxi/prebuilt/common/etc/init.d/Zipaling:system/etc/init.d/Zipaling \
     vendor/maxi/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
     vendor/maxi/prebuilt/common/etc/init.d/16sqlite_optimize:system/etc/init.d/16sqlite_optimize \
@@ -95,6 +96,7 @@ PRODUCT_COPY_FILES += \
     vendor/maxi/prebuilt/common/etc/init.d/LagFixer:system/etc/init.d/LagFixer \
     vendor/maxi/prebuilt/common/etc/init.d/LoopySmoothness:system/etc/init.d/LoopySmoothness \
     vendor/maxi/prebuilt/common/etc/init.d/Speedy:system/etc/init.d/Speedy \
+    vendor/maxi/prebuilt/common/etc/init.d/Ssmoothness_tweak:system/etc/init.d/Ssmoothness_tweak 
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
