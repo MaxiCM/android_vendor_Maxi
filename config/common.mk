@@ -136,8 +136,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     VoicePlus \
     Basic \
-    libemoji \
-    Terminal
+    libemoji 
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
@@ -305,7 +304,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
   ro.modversion=$(MAXI_VERSION) \
   ro.ota.version= $(shell date -u +%Y%m%d) \
   ro.ota.romname=MaxiCM
-  ro.cmlegal.url=https://cyngn.com/legal/privacy-policy
 
 -include vendor/cm-priv/keys/keys.mk
 
