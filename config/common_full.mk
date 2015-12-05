@@ -8,7 +8,6 @@ include vendor/maxi/config/cm_sounds.mk
 PRODUCT_PACKAGES += \
     LiveWallpapers \
     LiveWallpapersPicker \
-    MagicSmokeWallpapers \
     NoiseField \
     VisualizationWallpapers \
     PhotoTable \
