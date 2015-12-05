@@ -1,0 +1,6 @@
+#!/system/bin/sh
+if [ -e /sys/module/lowmemorykiller/parameters/minfree ]; then
+		echo "2560,4096,6144,17408,19456,23552" > /sys/module/lowmemorykiller/parameters/minfree
+	else
+		echo "Error, minfree has not founded."
+fi
