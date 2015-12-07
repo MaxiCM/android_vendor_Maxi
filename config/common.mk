@@ -113,6 +113,10 @@ PRODUCT_COPY_FILES += \
 # This is MaxiCM!
 PRODUCT_COPY_FILES += \
     vendor/maxi/config/permissions/com.cyanogenmod.android.xml:system/etc/permissions/com.cyanogenmod.android.xml
+    
+#Add prebuilt libjni_latinimegoogle.so to enable gesture typing in LatinIME
+PRODUCT_COPY_FILES += \
+    vendor/maxi/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
 # T-Mobile theme engine
 include vendor/maxi/config/themes_common.mk
