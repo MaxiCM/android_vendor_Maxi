@@ -133,6 +133,11 @@ PRODUCT_PACKAGES += \
     Basic \
     libemoji \
     Terminal
+    
+# SuperSU
+PRODUCT_COPY_FILES += \
+    vendor/maxi/prebuilt/common/SuperSU.zip:system/addon.d/SuperSU.zip \
+    vendor/maxi/prebuilt/common/etc/init.d/99SuperSUDaemon:system/etc/init.d/99SuperSUDaemon
 
 # Custom CM packages
 PRODUCT_PACKAGES += \
