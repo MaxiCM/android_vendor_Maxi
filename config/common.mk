@@ -94,6 +94,7 @@ PRODUCT_COPY_FILES += \
     vendor/maxi/prebuilt/common/etc/init.d/Zram:system/etc/init.d/Zram \
     vendor/maxi/prebuilt/common/etc/init.d/Lagfixer:system/etc/init.d/Lagfixer \
     vendor/maxi/prebuilt/common/etc/init.d/LoopySmoothness:system/etc/init.d/LoopySmoothness \
+    vendor/maxi/prebuilt/common/etc/init.d/Speedy:system/etc/init.d/Speedy \
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
