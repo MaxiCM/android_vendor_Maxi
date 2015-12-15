@@ -92,7 +92,6 @@ PRODUCT_COPY_FILES += \
     vendor/maxi/prebuilt/common/etc/init.d/81GPU_rendering:system/etc/init.d/81GPU_rendering \
     vendor/maxi/prebuilt/common/etc/init.d/RamBooster:system/etc/init.d/RamBooster \
     vendor/maxi/prebuilt/common/etc/init.d/net_buffer:system/etc/init.d/net_buffer \
-    vendor/maxi/prebuilt/common/etc/init.d/Ssmoothness_tweak:system/etc/init.d/Ssmoothness_tweak 
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
 # userinit support
