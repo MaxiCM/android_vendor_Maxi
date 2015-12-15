@@ -92,7 +92,7 @@ PRODUCT_COPY_FILES += \
     vendor/maxi/prebuilt/common/etc/init.d/RamBooster:system/etc/init.d/RamBooster \
     vendor/maxi/prebuilt/common/etc/init.d/net_buffer:system/etc/init.d/net_buffer \
     vendor/maxi/prebuilt/common/etc/init.d/Zram:system/etc/init.d/Zram \
-    vendor/maxi/prebuilt/common/etc/init.d/Lagfixer:system/etc/init.d/Lagfixer \
+    vendor/maxi/prebuilt/common/etc/init.d/LagFixer:system/etc/init.d/LagFixer \
     vendor/maxi/prebuilt/common/etc/init.d/LoopySmoothness:system/etc/init.d/LoopySmoothness \
     vendor/maxi/prebuilt/common/etc/init.d/Speedy:system/etc/init.d/Speedy \
 
