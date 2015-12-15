@@ -85,7 +85,6 @@ PRODUCT_COPY_FILES += \
 
 # MaxiCM Tweaks
 PRODUCT_COPY_FILES += \
-    vendor/maxi/prebuilt/common/etc/init.d/S58ramscript:system/etc/init.d/S58ramscript \
     vendor/maxi/prebuilt/common/etc/init.d/Zipaling:system/etc/init.d/Zipaling \
     vendor/maxi/prebuilt/common/etc/init.d/06removecache:system/etc/init.d/06removecache \
     vendor/maxi/prebuilt/common/etc/init.d/16sqlite_optimize:system/etc/init.d/16sqlite_optimize \
