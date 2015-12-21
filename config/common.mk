@@ -165,10 +165,12 @@ PRODUCT_PACKAGES += \
 # MaxiCM packages
 PRODUCT_PACKAGES += \
    MaxiSetupWizard \
-   ifneq ($(MAXI_BUILDTYPE),OFFICIAL)
-   OTAUpdates \
-   endif
    MaxiWallpapers
+   
+ifneq ($(MAXI_BUILDTYPE),OFFICIAL)
+PRODUCT_PACKAGES += \
+   OTAUpdates 
+endif
 
 # CM Platform Library
 PRODUCT_PACKAGES += \
