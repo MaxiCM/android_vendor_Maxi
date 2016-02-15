@@ -1,3 +1,4 @@
+add_lunch_combo maxi_condor-userdebug
 add_lunch_combo maxi_falcon-userdebug
 add_lunch_combo maxi_jagnm-userdebug
 add_lunch_combo maxi_jag3gds-userdebug
