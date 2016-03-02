@@ -96,7 +96,6 @@ PRODUCT_COPY_FILES += \
     vendor/maxi/prebuilt/common/etc/init.d/LagFixer:system/etc/init.d/LagFixer \
     vendor/maxi/prebuilt/common/etc/init.d/LoopySmoothness:system/etc/init.d/LoopySmoothness \
     vendor/maxi/prebuilt/common/etc/init.d/Speedy:system/etc/init.d/Speedy \
-    vendor/maxi/prebuilt/common/etc/init.d/81GPU_rendering:system/etc/init.d/RamBooster \
     vendor/maxi/prebuilt/common/etc/init.d/Ssmoothness_tweak:system/etc/init.d/Ssmoothness_tweak 
 
 ifneq ($(TARGET_BUILD_VARIANT),user)
