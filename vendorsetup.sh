@@ -6,3 +6,4 @@ add_lunch_combo maxi_janice-userdebug
 add_lunch_combo maxi_mako-userdebug
 add_lunch_combo maxi_osprey-userdebug
 add_lunch_combo maxi_surnia-userdebug
+add_lunch_combo maxi_shamu-userdebug
