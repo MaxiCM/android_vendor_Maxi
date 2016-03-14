@@ -133,6 +133,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     vendor/maxi/prebuilt/common/lib/libjni_latinimegoogle.so:system/lib/libjni_latinimegoogle.so
 
+# MaxiCM Emoji
+PRODUCT_COPY_FILES += \
+    vendor/maxi/prebuilt/common/fonts/NotoColorEmoji.ttf:system/fonts/NotoColorEmoji.ttf
+
 # T-Mobile theme engine
 include vendor/maxi/config/themes_common.mk
 
