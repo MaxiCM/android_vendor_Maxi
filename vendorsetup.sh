@@ -1,5 +1,7 @@
 add_lunch_combo maxi_condor-userdebug
 add_lunch_combo maxi_falcon-userdebug
+add_lunch_combo maxi_fortuna3g-userdebug
+add_lunch_combo maxi_fortunave3g-userdebug
 add_lunch_combo maxi_jagnm-userdebug
 add_lunch_combo maxi_jag3gds-userdebug
 add_lunch_combo maxi_janice-userdebug
