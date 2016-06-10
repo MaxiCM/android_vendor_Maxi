@@ -1,24 +1,20 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common MaxiCM stuff
+$(call inherit-product, vendor/maxi/config/common.mk)
 
-# Include CM audio files
-include vendor/cm/config/cm_audio.mk
+# Include MaxiCM audio files
+include vendor/maxi/config/maxi_sounds.mk
 
-# Optional CM packages
+# Optional MaxiCM packages
 PRODUCT_PACKAGES += \
-    Galaxy4 \
-    HoloSpiralWallpaper \
     LiveWallpapers \
     LiveWallpapersPicker \
-    MagicSmokeWallpapers \
     NoiseField \
-    PhaseBeam \
     PhotoTable \
     SoundRecorder \
     PhotoPhase \
     Screencast
 
-# Extra tools in CM
+# Extra tools in MaxiCM
 PRODUCT_PACKAGES += \
     7z \
     lib7z \

@@ -1,4 +1,4 @@
-for combo in $(curl -s https://raw.githubusercontent.com/CyanogenMod/hudson/master/cm-build-targets | sed -e 's/#.*$//' | grep cm-13.0 | awk '{printf "cm_%s-%s\n", $1, $2}')
+for combo in $(curl -s https://raw.githubusercontent.com/MaxiCM/hudson/master/maxi-build-targets | sed -e 's/#.*$//' | grep maxi-6.0 | awk '{printf "maxi_%s-%s\n", $1, $2}')
 do
     add_lunch_combo $combo
 done
