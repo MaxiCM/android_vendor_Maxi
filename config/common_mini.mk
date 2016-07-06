@@ -1,10 +1,10 @@
-# Inherit common CM stuff
-$(call inherit-product, vendor/cm/config/common.mk)
+# Inherit common MaxiCM stuff
+$(call inherit-product, vendor/maxi/config/common.mk)
 
 PRODUCT_SIZE := mini
 
-# Include CM audio files
-include vendor/cm/config/cm_audio.mk
+# Include MaxiCM audio files
+include vendor/maxi/config/maxi_sounds.mk
 
 # Default notification/alarm sounds
 PRODUCT_PROPERTY_OVERRIDES += \
